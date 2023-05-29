@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Eye Diagnostics</title>
+     <!--***************************************** FavIcon Link ********************************************-->
+    <link rel="shortcut icon" href="{% static '/images/logo-img.png' %}" type="image/x-icon">
+    <!--***************************************** CSS File Link ********************************************-->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <!--***************************************** Media queries File Link ********************************************-->
+    <link rel="stylesheet" href="{% static '/css/media-queries.css' %}">
+  </head>
+  <body>
+    <!--***************************************** Navbar ***************************************************-->
+    <header>
+      <!-- Left side Logo -->
+      <div class="nav2 container flex">
+        <div class="left-logo2 flex">
+          <img src="{% static '/images/logo-img.png' %}" alt="Eye Clinic Image" class="left-logo-img2" />
+          <h2 class="left-logo-heading">A Eye Diagnostics</h2>
+        </div>
+        <!-- right side Logo -->
+        <div class="right-logo2 flex">
+          <!-- <h3 class="right-logo-heading">EyeArt</h3>
+          <p class="right-logo-text">Diabetic Retinopathy Analysis Report</p> -->
+          <img src="{% static '/images/ned-white-bg-logo.png' %}" alt="" class="ned-logo">
+          <img src="{% static '/images/Final logo-01.png' %}" alt="" class="right-logo-img2">
+        </div>
+      </div>
+    </header>
+
+    <!--***************************************** Main Section ***************************************************-->
+    <section>
+      <div class="main-section container flex">
+        <!--*************************************Login Form ****************************************************8-->
+        <div class="header-left">
+          <div class="login-box">
+            <h1 class="form-heading">Welcome!</h1>
+            <form class="login-form"  method="POST" action="{% url 'models_page' %}" name="myForm">
+              {% csrf_token %}
+              <label class="login-form-label">Name</label>
+              <input class="login-form-input" type="text" name="username" placeholder="Enter Your Name Here" id="username_enter_main_page"/>
+              <label class="login-form-label">Password</label>
+              <input class="login-form-input" type="password" name="password" placeholder="Enter Your Password Here" id="password_enter_main_page"/>
+              <input type="submit" value="Get Started" class="form-button" />
+              <closeform></closeform>
+            </form>
+          </div>
+        </div>
+        <!-- Hero Image -->
+        <div class="header-right">
+          <img class="header-right-img" src="{% static '/images/eye-clinic-2.jpg' %}" alt="Eye Clinic" />
+        </div>
+      </div>
+    </section>
+    <script src="{% static '/js/script.js' %}"></script>
+    {% if messages %}
+      {% autoescape off %}
+          {% for msg in messages %}
+            <script>alert("{{ msg }}");</script>
+          {% endfor %}
+      {% endautoescape %}
+    {% endif %}
+  </body>
+</html>

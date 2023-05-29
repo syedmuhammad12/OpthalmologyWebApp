@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Eye Diagnostics</title>
+  <link rel="shortcut icon" href="{% static '/images/logo-img.png' %}" type="image/x-icon">
+  <!--***************************************** CSS File Link ********************************************-->
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  <!--***************************************** Media queries File Link ********************************************-->
+  <link rel="stylesheet" href="{% static '/css/media-queries.css' %}">
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!--***************************************** Navbar ***************************************************-->
+  <header>
+    <!-- Left side Logo -->
+    <div class="nav container flex">
+      <div class="left-logo flex">
+        <img src="{% static '/images/logo-img.png' %}" alt="Eye Clinic Image" class="left-logo-img" />
+        <h2 class="left-logo-heading">A Eye Diagnostics</h2>
+      </div>
+      <!-- right side Logo -->
+      <div class="right-logo flex">
+        <h3 class="right-logo-heading">EyeArt</h3>
+        <p class="right-logo-text">Diabetic Retinopathy Analysis Report</p>
+      </div>
+    </div>
+  </header>
+
+  <!--***************************************** Eye Images Input Section***************************************************-->
+  <section class="image-input-section container flex">
+    <h2>Model 3</h2>
+    <div class="inputs-container flex container">
+  
+      <!-- Left Eye Input -->
+      <div class="left-eye-input flex">
+        <h2 class="input-eye">Left Eye</h2>
+        <figure class="image-container flex">
+          <img id="chosen-img">
+          <figcaption id="file-name"></figcaption>
+        </figure>
+
+        <input type="file" id="upload-button" accept="image/*">
+        <label for="upload-button"><i class="fa-solid fa-arrow-up-from-bracket"></i> &nbsp Upload Left Eye Image</label>
+        <input class="picture-description" id="left-eye-picture-caption-input" type="text" placeholder="Type Text Here" >
+      </div>
+     
+
+      <!-- Right Eye Input -->
+    <div class="right-eye-input flex">
+      <h2 class="eye-input">Right Eye</h2>
+      <figure class="image-container flex">
+        <img id="chosen-img2">
+        <figcaption id="file-name2"></figcaption>
+      </figure>
+
+      <input type="file" id="upload-button2" accept="image/*">
+      <label for="upload-button2"><i class="fa-solid fa-arrow-up-from-bracket"></i> &nbsp Upload Right Eye Image</label>
+      <input class="picture-description" id="right-eye-picture-caption-input" type="text" placeholder="Type Text Here"> 
+    </div>
+    </div>
+
+    <!-- Next Button -->
+    <a><button class="model-button next-btn" type="button">Next <i class="fas fa-arrow-right"></i></button></a>
+  </section>
+
+</body>
+
+<!--***************************************** JS File Link ***************************************************-->
+<script src="{% static '/js/script.js' %}"></script>
+
+</html>

@@ -1,0 +1,615 @@
+/******************************************* Logo Font **********************************************/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Abril+Fatface&family=Anton&family=Baloo+Bhai+2:wght@800&family=Barlow+Condensed:wght@200&family=Combo&family=Cormorant+Garamond&family=Josefin+Sans:ital,wght@1,700&family=Knewave&family=Lato&family=Lexend:wght@200;300;700&family=Libre+Franklin&family=Livvic:wght@500&family=Marck+Script&family=Nunito+Sans:wght@200&family=Open+Sans&family=Pacifico&family=Poppins:wght@600&family=Proza+Libre&family=Righteous&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&family=Work+Sans&display=swap');
+
+/******************************************* Paragraph Font **********************************************/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Abril+Fatface&family=Anton&family=Baloo+Bhai+2:wght@800&family=Barlow+Condensed:wght@200&family=Combo&family=Cormorant+Garamond&family=Josefin+Sans:ital,wght@1,700&family=Knewave&family=Lato:wght@100;400&family=Lexend:wght@200;300;700&family=Libre+Franklin&family=Livvic:wght@500&family=Marck+Script&family=Nunito+Sans:wght@200&family=Open+Sans&family=Pacifico&family=Poppins:wght@200;600&family=Proza+Libre&family=Righteous&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&family=Work+Sans&display=swap');
+
+/******************************************* CSS Variables **********************************************/
+:root {
+  --padding-inline-section: 20px;
+  /* Font Family Variables */
+  --logo-font: 'Poppins', sans-serif;
+  --paragraph-font: 'Lato', sans-serif;
+
+  /* Color Variables */
+  --orange-color: #F69222;
+  --heading-bg: #B3C3DC;
+}
+
+/******************************************* Utility Classes **********************************************/
+.container {
+  max-width: 985px;
+  margin-inline: auto;
+  padding-inline: var(--padding-inline-section);
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.green-text{
+  font-family: var(--paragraph-font);
+  font-weight: 600;
+  color: lightgreen;
+  font-size: 0.8rem;
+}
+
+/*******************************************Index page Navbar **********************************************/
+.nav2 {
+  margin-top: 0 !important;
+  gap: 55%;
+}
+
+.left-logo2 {
+  font-family: var(--logo-font);
+  color: var(--orange-color);
+  width: 22%;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: 0;
+}
+
+.left-logo-img2{
+  width: 60%;
+}
+
+.left-logo-heading {
+  margin-left: -20px !important;
+  width: 50%;
+}
+
+.right-logo2 {
+  flex-direction: row;
+  width: 50%;
+  margin-right: -5%;
+}
+
+.right-logo-img2{
+  width: 70%;
+}
+
+.ned-logo{
+  width: 30%;
+}
+
+.models-logo{
+  margin-left: 6.8% !important;
+}
+
+/******************************************* Navbar **********************************************/
+.nav {
+  margin-top: 0 !important;
+  gap: 50%;
+}
+
+.left-logo {
+  font-family: var(--logo-font);
+  color: var(--orange-color);
+  width: 22%;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: 0;
+}
+
+.left-logo-img {
+  width: 60%;
+  display: none;
+}
+
+.left-logo-heading {
+  margin-left: -20px !important;
+  width: 50%;
+}
+
+.right-logo {
+  font-family: var(--logo-font);
+  flex-direction: column;
+  /* align-self: flex-end; */
+  column-gap: 0.54rem;
+  visibility: hidden;
+}
+
+.right-logo-heading {
+  /* font-family: var(--logo-font); */
+  padding-top: 10%;
+  margin: 0 !important;
+  font-weight: 800;
+}
+
+.right-logo-text {
+  padding-top: 0;
+  font-family: var(--paragraph-font);
+  color: grey;
+}
+
+.models-logo{
+  margin-left: 6.8% !important;
+}
+
+.report-header-left{
+  margin-left: 4%;
+}
+
+/******************************************* Main Section **********************************************/
+.main-section {
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 8%;
+  margin-top: 1%;
+}
+
+.header-right {
+  flex-basis: 50%;
+  margin-top: 5%;
+}
+
+.header-right-img {
+  width: 100%;
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+}
+
+.header-left {
+  flex-basis: 55%;
+  margin-top: 5%;
+  margin-right: 8%;
+}
+
+.header-left h1 {
+  margin-top: 20px;
+}
+
+/******************************************* Login Form **********************************************/
+.login-box {
+  width: 85%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+
+.form-heading {
+  font-family: var(--logo-font);
+  color: var(--orange-color);
+  text-align: center;
+  padding-top: 5%;
+}
+
+h4 {
+  text-align: center;
+}
+
+.login-form {
+  width: 86%;
+  height: 80%;
+  margin-left: 20px; 
+}
+
+.login-form-label {
+  font-family: var(--paragraph-font);
+  display: flex;
+  padding-block: 3%;
+  padding-left: 3%;
+  width: 90%;
+  margin-top: 8%;
+  margin-bottom: 3%;
+  font-size: 1.1rem;
+}
+
+.login-form-input {
+  width: 88%;
+  margin-left: 4%;
+  padding: 2%;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-button{
+  margin-bottom: 8%;
+  width: 60%;
+  height: 35px;
+  margin-top: 20px;
+  margin-left: 18%;
+  border-radius: 7px;
+  border: none;
+  background-color: var(--orange-color);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/******************************************* Models Section **********************************************/
+.models-section {
+  flex-direction: column;
+  margin-top: 5%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  flex-wrap: wrap;
+}
+
+.buttons-container {
+  flex-direction: column;
+}
+
+.models-section h2 {
+  font-family: var(--paragraph-font);
+  color: grey;
+}
+
+.model-button {
+  font-size: 1.156rem;
+  font-family: var(--logo-font);
+  font-weight: 500 !important;
+  padding: 0.5em 1em;
+  margin: 0.85em;
+  border-radius: 25px;
+  border: 2px solid var(--orange-color);
+  cursor: pointer;
+  color: white;
+  background-color: var(--orange-color);
+}
+
+.model-button:hover {
+  background: transparent;
+  border: 2px solid var(--orange-color);
+  color: var(--orange-color);
+}
+
+.lo-btn{
+  margin-top: 3% !important;
+  margin-left: 18% !important;
+}
+
+/******************************************* Models Input Section **********************************************/
+.image-input-section{
+  flex-direction: column;
+  background-color: white;
+}
+
+.image-input-section h2{
+  font-family: var(--logo-font);
+  text-align: center;
+  font-weight: 700 !important;
+  color: grey;
+}
+
+ .inputs-container{
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13%;
+  margin-left: 3%;
+  margin-top: 5%;
+  width: 100%;
+  background-color: white;
+  margin-bottom: -16%;
+  
+}
+.left-eye-input{
+  flex-direction: column;
+  background-color: white;
+  width: 40%;
+  margin-top: 27%;
+  margin-left: 0%;
+  transform: translate(-50%,-50%);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.image-container{
+  flex-direction: column;
+  width: 100%;
+  margin: 2% auto 10% auto;
+}
+
+.image-container img{
+  max-width: 100%;
+  max-height: 400px;
+  margin: auto;
+  margin-top: 20%;
+  overflow: hidden;
+
+}
+
+figcaption{
+  margin: 20px 0 30px 0;
+  text-align: center;
+  color: var(--orange-color);
+  font-family: var(--paragraph-font);
+}
+
+input[type="file"]{
+  display: none;
+}
+
+label{
+  display: block;
+  position: relative;
+  background-color: var(--orange-color);
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: var(--logo-font);
+  font-weight: 700 !important;
+  text-align: center;
+  width: 68%;
+  padding: 18px 0;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.picture-description{
+  width: 67%;
+  background-color: var(--orange-color);
+  color: #ffffff !important;
+  padding-block: 3%;
+  margin-top: 1.1rem;
+  margin-bottom: 1.65rem;
+  font-family: var(--logo-font);
+  font-weight: 600 !important;
+  text-align: center;
+  outline-color: transparent;
+  border-radius: 5px;
+  border: none;
+}
+
+.picture-description::placeholder{
+  color: white;
+}
+
+.picture-description i{
+  color: white !important;
+}
+
+.right-eye-input{
+  flex-direction: column;
+  background-color: white;
+  width: 40%;
+  margin-top: 27%;
+  margin-right: -30%;
+  transform: translate(-50%,-50%);
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+
+.eye-input{
+  font-family: var(--logo-font);
+  color: black;
+}
+
+.input-heading{
+  margin-top: 50%;
+  margin-bottom: 40%;
+}
+
+.next-btn{
+  margin-top: -25%;
+}
+
+.model1-logo{
+  margin-left: 9% !important;
+  margin-top: 0.2% !important;
+}
+
+.input-eye{
+  padding-top: 3%;
+  margin-top: 5%;
+}
+/******************************************* Report Section **********************************************/
+.report-section{
+  flex-direction: column;
+}
+
+.info-container{
+  flex-direction: row;
+  width: 100%;
+  margin-top: 4%;
+  gap: 40%;
+}
+
+
+.patient-info{
+  flex-direction: column;
+  /* width: 30%; */
+}
+
+.sub-heading{
+  font-family: var(--logo-font);
+  background-color: var(--heading-bg);
+  height: 1%;
+}
+
+.heading-1{
+  width: 587%;
+}
+
+.heading-2{
+  width: 373%;
+}
+
+.patient-info-h1{
+  padding-left: 42%;
+}
+
+.general-info-h1{
+padding-left: 37%;
+}
+
+h3{
+  font-family: var(--logo-font);
+  font-size: 0.99rem;
+}
+
+.patient-info-area{
+  flex-direction: row;
+}
+
+.question{
+  flex-direction: column;
+  text-align: left !important;
+}
+
+.answer{
+  flex-direction: column;
+  text-align:left !important ;
+  font-family: var(--paragraph-font);
+  font-size: 0.9rem;
+}
+
+.bold{
+  font-family: var(--paragraph-font);
+  font-weight: 700 !important;
+  font-size: 0.9rem;
+}
+
+.general-info{
+  flex-direction: column;
+}
+
+.result-summary{
+  flex-direction: column;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.result-summary-info{
+  margin-top: 4%;
+  width: 100%;
+  gap: 26%;
+}
+
+.result-summary-heading{
+   /* width: 226% !important; */
+   width: 91%;
+   padding-left: 3%;
+   padding-right: 9%;
+   margin-right: 67%;
+   margin-left: 70%;
+}
+
+.result-summary-text{
+  border: 2px solid var(--heading-bg);
+  width: 93.5%;
+  padding-left: 1.5%;
+  padding-right: 6.6%;
+  margin-right: 14%;
+  /* margin-left: 79px; */
+  margin-left: 16%;
+}
+
+.right-eye-result-heading{
+  /* width: 75%;
+  margin-right: 10%;
+  margin-left: -100%;
+  padding-left: 5%;
+  padding-right: 5%; */
+  width: 97%;
+  padding-left: 0%;
+  /* padding-right: 42%;
+  margin-right: 73%; */
+  margin-left: 44%;
+  padding-right: 58%;
+}
+
+
+.eyes-images{
+  margin-top: 8%;
+  gap: 10%;
+}
+
+.right-eye-result{
+  flex-direction: column;
+  width: 40%;
+}
+
+.right-eye-result img{
+  width: 100%;
+}
+
+.left-eye-result{
+  flex-direction: column;
+  width: 40%;
+}
+
+.left-eye-result img{
+  width: 100%;
+}
+
+.left-eye-result-h2{
+  width: 208%;
+  margin-right: 52%;
+  }
+
+.note{
+  font-family: var(--paragraph-font);
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding-top: 5%;
+}
+
+.note-heading{
+  width: 100%;
+  padding-left: 2%;
+  margin-top: 4%;
+}
+
+.n2{
+  margin-top: -3% !important;
+}
+
+.right-eye-patient-info{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.first-heading{
+  padding-left: 11%;
+}
+
+.report-img-caption{
+  font-family: var(--paragraph-font);
+}
+
+.cta-btns{
+  flex-wrap: wrap;
+  margin-left: -8%;
+}
+
+.done-btn{
+  padding-inline: 1.5rem;
+}
+
+.print-btn{
+  font-size: 1.156rem;
+  font-family: var(--logo-font);
+  font-weight: 500 !important;
+  padding: 0.5em 1.5em;
+  margin: 0.85em;
+  border-radius: 25px;
+  border: 2px solid var(--orange-color);
+  cursor: pointer;
+  color: var(--orange-color);
+  background-color: transparent
+}
+
+.print-btn:hover {
+  background: var(--orange-color);
+  border: 2px solid var(--orange-color);
+  color: white
+}
+
+@media print {
+  body{
+      width: 21cm;
+      height: 29.7cm;
+      margin: 30mm 45mm 30mm 45mm; 
+      /* change the margins as you want them to be. */
+ } 
+}

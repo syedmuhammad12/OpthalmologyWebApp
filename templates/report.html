@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Eye Diagnostics</title>
+    <link rel="shortcut icon" href="{% static '/images/logo-img.png' %}" type="image/x-icon">
+    <!--***************************************** CSS File Link ********************************************-->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <!--***************************************** Media queries File Link ********************************************-->
+    <link rel="stylesheet" href="{% static '/css/media-queries.css' %}">
+</head>
+
+<body>
+    <!--***************************************** Navbar ***************************************************-->
+    
+    <header>
+        <!-- Left side Logo -->
+        <div class="nav container flex">
+            <div class="left-logo report-header-left flex" style="margin-left: 1% !important; margin-bottom: -5% !important;">
+                <img src="{% static '/images/logo-img.png' %}" alt="Eye Clinic Image" class="left-logo-img" />
+                <h2 >A Eye Diagnostics</h2>
+            </div>
+            <!-- right side Logo -->
+            <div class="right-logo flex">
+                <h3 class="right-logo-heading">EyeArt</h3>
+                <p class="right-logo-text">Diabetic Retinopathy Analysis Report</p>
+            </div>
+        </div>
+    </header>
+
+    <!--***************************************** Main Section ***************************************************-->
+    <section class="report-section flex container">
+
+        <div class="info-container container flex">
+            <div class="patient-info pi flex right-head-div "  >
+                <div class="sub-heading heading-1 heading-4 flex">
+                    <h3 class="patient-info-h1 heading">Patient Info</h3>
+                </div>
+
+                <!-- <div class="patient-info-area flex">
+                    <div class="question flex">
+                        <span class="bold">Patient ID: </span>
+                        <span class="bold">Patient Name: </span>
+                        <span class="bold">Date Of Birth: </span>
+                        <span class="bold">Gender: </span>
+                        <span class="bold">Encounter ID: </span>
+                    </div>
+
+                    <div class="answer flex">
+                        <span>{{patient_id}}</span>
+                        <span>{{name}}</span>
+                        <span>{{dob}}</span>
+                        <span>{{gender}}</span>
+                        <span>{{encounter_id}}</span>
+                    </div>
+
+                </div> -->
+                <div class="table-like">
+
+                    <div class="question answer flex">
+                        <span class="bold">Patient ID: </span>
+                        <span >{{patient_id}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Patient Name: </span>
+                        <span>{{name}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Date Of Birth: </span>
+                        <span>{{dob}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Gender: </span>
+                        <span>{{gender}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Encounter ID: </span>
+                        <span>{{encounter_id}}</span>
+                    </div>
+
+                </div>
+                
+
+
+
+            </div>
+
+            <div class="general-info gi flex left-head-div" >
+                <div class="sub-heading heading-2 heading-3 heading flex">
+                    <h3 class="general-info-h1">General Info</h3>
+                </div>
+
+                 <!--****************************** General Info *************************************************8-->
+                <!-- <div class="general-info-area flex">
+                    <div class="question flex">
+                        <span class="bold">Referring Location: </span>
+                        <span class="bold">Referring Provider: </span>
+                        <span class="bold">EyeArt Control ID: </span>
+                        <span class="bold">Dilation Status: </span>
+                        <span class="bold">Exam Analysis Date: </span>
+                    </div>
+
+                    <div class="answer flex">
+                        <span>{{referring_location}}</span>
+                        <span>{{referring_provider}}</span>
+                        <span>{{eye_control_id}}</span>
+                        <span>{{dialtion_status}}</span>
+                        <span>{{current_examine_date}}</span>
+
+                    </div>
+
+                </div>-->
+
+                <div class="table-like" >
+
+                    <div class="question answer flex">
+                        <span class="bold">Referring Location: </span>
+                        <span>{{referring_location}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Referring Provider: </span>
+                        <span>{{referring_provider}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">EyeArt Control ID: </span>
+                        <span>{{eye_control_id}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Dilation Status: </span>
+                        <span>{{dialtion_status}}</span>
+                    </div>
+                    <div class="question answer flex">
+                        <span class="bold">Exam Analysis Date: </span>
+                        <span>{{current_examine_date}}</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="result-summary flex ">
+            <div class="result-summary-heading sub-heading">
+                <h3>EyeArt Diabetic Retinopathy (DR) Exam Result Summary</h3>
+            </div>
+            <div class="result-summary-text green-text">{{result_summary}}
+            </div>
+        </div>
+
+        <div class="info-container result-summary-info flex">
+            <div class="patient-info right-eye-patient-info flex">
+                <div class="sub-heading heading-1 right-eye-result-heading flex">
+                    <h3 class="patient-info-h1 heading-1 first-heading ">Right Eye Results</h3>
+                </div>
+
+                <div class="patient-info-area flex">
+                    <div class="question flex">
+                        <span class="bold"> Result: </span>
+                        <!-- <span class="bold">vtDR Result: </span> -->
+                    </div>
+
+                    <div class="answer green-text flex">
+                        <span>{{result_right_eye}}</span>
+                        <!-- <span>Negative for vision-threatening DR</span> -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="general-info left-eye-patient-info flex">
+                <div class="sub-heading heading-2 left-eye-result-h2 flex">
+                    <h3 class="general-info-h1">Left Eye Results</h3>
+                </div>
+
+                <div class="general-info-area flex">
+                    <div class="question flex">
+                        <span class="bold"> Result: </span>
+                        <!-- <span class="bold">vtDR Result: </span> -->
+                    </div>
+
+                    <div class="answer green-text flex">
+                        <span>{{result_left_eye}}</span>
+                        <!-- <span>Negative for vision threatening DR</span> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="eyes-images flex">
+            <div class="right-eye-result">
+                <div class="img-1">
+                    <img src={{right_eye_image}} alt="" id="right-eye-result">
+                </div>
+                <p class="report-img-caption">{{right_eye_image_name}}</p>
+            </div>
+
+            <div class="left-eye-result">
+                <div class="img-2">
+                    <img src={{left_eye_image}} alt="">
+                </div>
+                <p class="report-img-caption">{{left_eye_image_name}}</p>
+            </div>
+        </div>
+
+        <!-- <p class="note">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi laborum quis reiciendis tempora
+            asperiores commodi illum quas aspernatur consequuntur vitae. Eum tempore sit similique at.</p> -->
+
+
+        <div class="sub-heading note-heading">
+            <h3>Note</h3>
+        </div>
+        <p class="note n2">This is a computer generated report, hence required no signature.</p>
+
+
+        <div class="flex cta-btns">
+            <a href="{% url 'models_page_redirect' %}"><button class="model-button done-btn" type="button">Done </button></a>
+            <button class="print-btn" type="button" onclick="print_page()">Print</button>
+        </div>
+
+    </section>
+    <script>
+        window.print();
+    </script>
+    <script>
+        function print_page(){
+            window.print();
+        }
+    </script>
+</body>
+
+</html>

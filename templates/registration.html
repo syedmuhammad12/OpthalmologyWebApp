@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Eye Diagnostics</title>
+    <link rel="shortcut icon" href="{% static '/images/logo-img.png' %}" type="image/x-icon">
+    <!--***************************************** CSS File Link ********************************************-->
+    <link rel="stylesheet" href="{% static '/css/registration.css' %}" />
+    <!--***************************************** Media queries File Link ********************************************-->
+    <!-- <link rel="stylesheet" href="media-queries.css"> -->
+  </head>
+  <body style="margin-top: -6% !important;">
+    <!--***************************************** Navbar ***************************************************-->
+    {% comment %} <header>
+      <!-- Left side Logo -->
+      <div class="nav container1 flex">
+        <div class="left-logo flex">
+          <img src="{% static '/images/logo-img.png' %}" alt="Eye Clinic Image" class="left-logo-img" />
+          <h2 class="left-logo-heading" style="margin-left:6%">A Eye Diagnostics</h2>
+        </div>
+        <!-- right side Logo -->
+        <!-- <div class="right-logo flex">
+          <h3 class="right-logo-heading">EyeArt</h3>
+          <p class="right-logo-text">Diabetic Retinopathy Analysis Report</p>
+        </div> -->
+      </div>
+    </header> {% endcomment %}
+    <header>
+      <!-- Left side Logo -->
+      <div class="nav   flex">
+        <div class="left-logo  flex">
+          <!-- <img src="logo-img.png" alt="Eye Clinic Image" class="left-logo-img" /> -->
+          <h2 class="left-logo-heading reg-heading">A Eye Diagnostics</h2>
+        </div>
+        <!-- right side Logo -->
+        <!-- <div class="right-logo flex">
+          <h3 class="right-logo-heading">EyeArt</h3>
+          <p class="right-logo-text">Diabetic Retinopathy Analysis Report</p>
+        </div> -->
+      </div>
+<!-- 
+      <div class="logo">
+        <h2>A Eye Diagnostics</h2>
+      </div> -->
+    </header>
+
+    <!--***************************************** Main Section ***************************************************-->
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+          <form  method="POST" action="{% url 'report_page' %}" name="myForm">
+            {% csrf_token %}
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" name="full_name" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Patient ID: </span>
+                <input type="text" name="patient_id" placeholder="Enter Patient ID" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Encounter ID: </span>
+                <input type="text" name="encounter_id" placeholder="Enter Encounter ID" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Dilation Status: </span>
+                <input type="text" name="dialtion_status" placeholder="Enter Dilation Status" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Referring Location: </span>
+                <input type="text" name="referring_location" placeholder="Enter your Referring Location" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Date of Birth</span>
+                <input type="date" name="dob" placeholder="Select DOB" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Referring Provider: </span>
+                <input type="text" name="referring_provider" placeholder="Enter Referring Provider" required>
+              </div>
+              <div class="input-box">
+                <span class="details">A-Eye Diagnostics Control ID: </span>
+                <input type="text" name="eye_control_id" placeholder="Enter A-Eye Diagnostics Control ID" required>
+              </div>
+            </div>
+
+            <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1" value="Male">
+              <input type="radio" name="gender" id="dot-2" value="Female">
+              {% comment %} <input type="radio" name="gender" id="dot-3"> {% endcomment %}
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+
+              </div>
+            </div>
+            
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+            
+          </div>
+            
+            
+          </form>
+        </div>
+      </div>
+    
+      <script src="{% static '/js/script.js' %}"></script>
+  </body>
+</html>
